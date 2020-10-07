@@ -138,7 +138,15 @@
 .cont .column.col5 {border-right: 1px solid #c8c8c8;}
 .cont .column.col6 {margin: 0; padding: 0;}
 
-.cont .column .ico_img {position: absolute; left: 0; top: 0px; display: block; background-image: url(../img/icon.png); width: 60px; height: 60px;}
+.cont .column .ico_img {
+    position: absolute; 
+    left: 0; 
+    top: 0px; 
+    display: block; 
+    background-image: url(../img/icon.png); 
+    width: 60px; 
+    height: 60px;
+}
 .cont .col1 .ico_img {background-position: 0 -240px;}
 .cont .col1 .ico_img:hover {background-position: -60px -240px;}
 .cont .col2 .ico_img {background-position: 0 -300px;}
