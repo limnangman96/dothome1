@@ -61,7 +61,12 @@
     margin-top: -5px;
 }
 .header .header_icon {text-align: center; margin-top: 40px;}
-.header .header_icon a {background-image: url(../img/icon.png); width: 60px; height: 60px; display: inline-block;}
+.header .header_icon a {
+    background-image: url(../img/icon.png); 
+    width: 60px; 
+    height: 60px; 
+    display: inline-block;
+}
 .header .header_icon a.icon1 {background-position: 0 0;}
 .header .header_icon a.icon1:hover {background-position: -60px 0;}
 .header .header_icon a.icon2 {background-position: 0 -60px;}
