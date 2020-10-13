@@ -292,7 +292,7 @@
 
 .notice4 {border: 1px solid #ccc; margin-top: 15px; position: relative;}
 .notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-size: 14px; font-weight: bold; color: #0093bd;}
-.notice4 h4 em {color: red;}
+.notice4 h4 em {color: #cf3292;}
 .notice4 ul {padding: 10px;}
 .notice4 li {overflow: hidden; padding-left: 8px; background: url(../img/dot.gif) no-repeat 0 8px;}
 .notice4 li a {float: left; width: 65%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
