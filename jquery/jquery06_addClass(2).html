@@ -41,9 +41,21 @@
     <script src="jquery.min_1.1.24.js"></script>
     <script> 
        //글씨를 클릭하면 경고창
-       $("#tab-btn li a").click(function(){
-           alert("글씨를 클릭하셨습니다");
-       }) 
+       $("#tab-btn li:eq(0) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img1");
+       }); 
+       $("#tab-btn li:eq(1) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img2");
+       }); 
+       $("#tab-btn li:eq(2) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img3");
+       }); 
+       $("#tab-btn li:eq(3) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img4");
+       }); 
+       $("#tab-btn li:eq(4) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img5");
+       }); 
     </script>
 
 </body>
