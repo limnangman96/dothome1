@@ -4,4 +4,5 @@
 <a href="https://limnangman96.github.io/dothome1/webstandard/index.html">바로가기</a>
 
 #제이쿼리 예제<br/>
-find() : <a href="https://limnangman96.github.io/dothome1/jquery/jqery04_find(2).html">바로가기</a>
+find() : <a href="https://limnangman96.github.io/dothome1/jquery/jquery04_find(2).html">바로가기</a>
+addClass : <a href="https://limnangman96.github.io/dothome1/jquery/jquery06_addClass(2).html">바로가기</a>
