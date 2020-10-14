@@ -5,3 +5,4 @@
 
 #제이쿼리 예제<br/>
 find() : <a href="https://limnangman96.github.io/dothome1/jquery/jqery04_find(2).html">바로가기</a>
+addClass : <a href="https://limnangman96.github.io/dothome1/jquery/jqery06_addClass(2).html">바로가기</a>
