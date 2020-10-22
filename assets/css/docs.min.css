@@ -5,6 +5,13 @@
  * details,  see http://creativecommons.org/licenses/by/3.0/.
  */
 
+ @font-face {
+    font-family: 'IBMPlexSansKR-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     position: relative; 
 }
@@ -239,6 +246,7 @@ table em {border: 1px solid #000; font-style: normal; font-size: 80%; padding: 3
 .bs-header h1 {
     margin-top: 0;
     color: #fff;
+    font-family: 'IBMPlexSansKR-Medium';
 }
 .bs-header p {
     margin-bottom: 0;
