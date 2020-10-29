@@ -11,3 +11,6 @@ a:hover {color: #2698cb;}
 body, input, textarea, select, button, table {
     font-family: 'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5;
 }
+
+/* 블릿기호 초기화 */
+ul {list-style: none;}
