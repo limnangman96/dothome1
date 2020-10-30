@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 레이아웃5</title>
     <style>
+        /* reset */
         * {padding: 0; margin: 0;}
         .container {width: 1200px; margin: 0 auto;}
+
+        /* layout */
         #header {width: 100%; height: 100px; background: #b1dffe;}
         #banner {width: 100%; height: 300px; background: #7cccfe;}
         #cont1 {overflow: hidden;}
@@ -24,6 +27,7 @@
         .box4 {width: 21%; height: 83%; background: #007ad9; float: left; margin: 2%; border-radius: 10%;}
         #footer {width: 100%; height: 100px; background: #3db7fc;} 
 
+        /* media */
         @media (max-width: 1220px){
             .container {width: 100%;}
             .cont2-1 {width: 50%;}
@@ -55,25 +59,32 @@
     <div id="wrap">
         <div class="container">
             <header id="header"></header>
+            <!-- header -->
             <aside id="banner"></aside>
+            <!-- banner -->
             <section id="cont1">
                 <div class="cont1-1"></div>
                 <div class="cont1-2"></div>
                 <div class="cont1-3"></div>
             </section>
+            <!-- cont1 -->
             <section id="cont2">
                 <div class="cont2-1"></div>
                 <div class="cont2-2"></div>
                 <div class="cont2-3"></div>
             </section>
+            <!-- cont2 -->
             <section id="boxWrap">
                 <div class="box1"></div>
                 <div class="box2"></div>
                 <div class="box3"></div>
                 <div class="box4"></div>
-            </section>
+            <!-- </section>boxWrap -->
             <footer id="footer"></footer>
+            <!-- footer -->
         </div>
+        <!-- container -->
     </div>
+    <!-- wrap -->
 </body>
 </html>

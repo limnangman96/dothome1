@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 레이아웃4</title>
     <style>
+        /* reset */
         * {margin: 0; padding: 0;}
         body {background: #fff8e1;}
+
+        /* layout */
         .container {width: 1200px; margin: 0 auto;}
         header {width: 100%; height: 100px; background: #ffde81;}
         aside {width: 100%; height: 300px; background: #ffd34e;}
@@ -16,6 +19,7 @@
         }
         footer {width: 100%; height: 100px; background: #ffb200;}
 
+        /* media */
         @media (max-width: 1210px){
             .container {width: 100%;}
             section > article {width: 23%;}
@@ -41,7 +45,9 @@
     <div id="wrap">
         <main class="container">
             <header></header>
+            <!-- header -->
             <aside></aside>
+            <!-- aside -->
             <section>
                 <article></article>
                 <article></article>
@@ -54,8 +60,12 @@
                 <article></article>
                 <article></article>
             </section>
+            <!-- section -->
             <footer></footer>
+            <!-- footer -->
         </main>
+        <!-- container -->
     </div>
+    <!-- wrap -->
 </body>
 </html>
