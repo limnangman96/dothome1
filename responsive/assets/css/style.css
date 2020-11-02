@@ -1,6 +1,7 @@
 /* 레이아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) center top repeat-x;}
 #nav {background-color: #f6fdff;}
+#article {background: #DCEFF7;}
 
 /* 컨테이너 */
 .container {width: 1200px; margin: 0 auto; /*background: rgba(0,0,0,0.3);*/}
@@ -79,7 +80,6 @@
 }
 .header .header_icon li a:hover {
     box-shadow: 0 0 0 3px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;
-
 }
 
 /* 배너 */
@@ -108,6 +108,22 @@
 .nav > div li:hover a::after {
     width: 100%;
 }
+.article {padding: 5px 0; position: relative;}
+.article h2 {text-align: center; font-family: 'Nanum Brush Script'; font-size: 40px; color: #2A91C1;}
+.article_icon {}
+.article_icon a {
+    display: inline-block; 
+    width: 60px; height: 60px; 
+    background: #2A91C1; 
+    text-align: center;
+    font-size: 35px; 
+    color: #fff; 
+    line-height: 60px;
+    border-radius: 50%; 
+    position: absolute; right: 0; top: 5px;
+    transition: all 0.3s ease-out; 
+}
+.article_icon a:hover {box-shadow: 0 0 0 3px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
