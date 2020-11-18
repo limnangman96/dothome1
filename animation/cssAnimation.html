@@ -13,6 +13,8 @@
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
     <link href="../assets/css/prism.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
@@ -22,6 +24,7 @@
     <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
     <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
     <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Jiwon" />
@@ -29,12 +32,14 @@
     <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
     <meta property="og:site_name" content="지원" />
     <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
     <!-- twitter meta tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Jx5MnvLWGS7iNV5" />
     <meta name="twitter:title" content="Jiwon" />
     <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
     <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
@@ -441,7 +446,7 @@
                 <!-- //intro5 -->
                 <style>
                     .timing.bg6 {height: 600px;}
-                    .timing.bg6 > div {background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);}
+                    .timing.bg6 > div {background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);}
                     .timing25.normal {animation: move2 4s infinite ease normal;}
                     .timing25.reverse {animation: move2 4s infinite ease reverse;}
                     .timing25.alternate {animation: move2 4s infinite ease alternate;}
@@ -478,6 +483,114 @@
 </code></pre>
                 </div>
                 <!-- //intro6 -->
+                <style>
+                    .timing.bg7 > div {background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);}
+                    .timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
+                    .timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
+                    .timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards;}
+                    .timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both;}
+                    @keyframes move3 {
+                        0% {left: 0%;}
+                        100% {left: calc(100% - 120px);}                        
+                    }
+                </style>
+                <!-- intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">animation-fill-mode
+                        <button type="button" class="btn btn-default start7">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation-fill-mode</em></h3>
+                        <div class="timing bg7">
+                            <div class="timing26"><span>timing26</span></div>
+                            <div class="timing27"><span>timing27</span></div>
+                            <div class="timing28"><span>timing28</span></div>
+                            <div class="timing29"><span>timing29</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.timing.bg7 > div {background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);}
+.timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
+.timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
+.timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards;}
+.timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both;}
+@keyframes move3 {
+    0% {left: 0%;}
+    100% {left: calc(100% - 120px);}                        
+}
+</code></pre>
+                </div>
+                <!-- //intro7 -->
+                <style>
+                    .timing.bg8 {height: 600px;}
+                    .timing.bg8 > div {background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);}
+                    .timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
+                    .timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
+                </style>
+                <!-- intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">animation-play-state
+                        <button type="button" class="btn btn-default start8-1">running</button>
+                        <button type="button" class="btn btn-default start8-2">paused</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation-play-state</em></h3>
+                        <div class="timing bg8">
+                            <div class="timing30"><span>timing30</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.timing.bg8 {height: 600px;}
+.timing.bg8 > div {background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);}
+.timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
+.timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
+</code></pre>
+                </div>
+                <!-- //intro8 -->
+                <style>
+                    .timing.bg9 {display: flex; justify-content: space-between; min-height: 400px;}
+                    .timing.bg9 > div {background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);}
+                    .timing.bg9 > div.ani1 {animation: wobble 1s 10 ease;}
+                    .timing.bg9 > div.ani2 {animation: zoomInUp 1s 10 ease;}
+                    .timing.bg9 > div.ani3 {animation: hinge 1s 10 ease;}
+                    .timing.bg9 > div.ani4 {animation: rotateIn 1s 10 ease;}
+                    .timing.bg9 > div.ani5 {animation: flipOutY 1s 10 ease;}
+                    .timing.bg9 > div.ani6 {animation: heartBeat 1s 10 ease;}
+                    .timing.bg9 > div.ani7 {animation: backInLeft 1s 10 ease;}
+                </style>
+                <!-- intro9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">Animate.css
+                        <button type="button" class="btn btn-default">ani1</button>
+                        <button type="button" class="btn btn-default">ani2</button>
+                        <button type="button" class="btn btn-default">ani3</button>
+                        <button type="button" class="btn btn-default">ani4</button>
+                        <button type="button" class="btn btn-default">ani5</button>
+                        <button type="button" class="btn btn-default">ani6</button>
+                        <button type="button" class="btn btn-default">ani7</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation-play-state</em></h3>
+                        <div class="timing bg9">
+                            <div class="timing31"><span>timing31</span></div>
+                            <div class="timing32"><span>timing32</span></div>
+                            <div class="timing33"><span>timing33</span></div>
+                            <div class="timing34"><span>timing34</span></div>
+                            <div class="timing35"><span>timing35</span></div>
+                            <div class="timing36"><span>timing36</span></div>
+                            <div class="timing36"><span>timing37</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.timing.bg9 {display: flex; justify-content: space-between; min-height: 400px;}
+.timing.bg9 > div {background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);}
+.timing.bg9 > div.ani1 {animation: wobble 1s 10 ease;}
+.timing.bg9 > div.ani2 {animation: shakeX 1s 10 ease;}
+.timing.bg9 > div.ani3 {animation: swing 1s 10 ease;}
+.timing.bg9 > div.ani4 {animation: tada 1s 10 ease;}
+.timing.bg9 > div.ani5 {animation: jello 1s 10 ease;}
+.timing.bg9 > div.ani6 {animation: heartBeat 1s 10 ease;}
+.timing.bg9 > div.ani7 {animation: swing 1s 10 ease;}
+</code></pre>
+                </div>
+                <!-- //intro9 -->
             </div>
             <!-- //col-md-12 -->
 
@@ -576,11 +689,24 @@
         //     $(".timing.bg6 > div").addClass(txt);
         // });
 
-        $(".btn-default").click(function(){
+        $("#intro6 > button").click(function(){
             let txt = $(this).text();
-            $(".timing.bg6 > div").removeClass("normal reverse alternate alternate-reverse").addClass(txt);
+            $(".timing25").removeClass("normal reverse alternate alternate-reverse").addClass(txt);
         });
 
+        $(".start7").click(function(){
+            $(".timing.bg7 > div").addClass("show");
+        });
+
+        $("#intro8 > button").click(function(){
+            let txt = $(this).text();
+            $(".timing30").removeClass("running paused").addClass(txt);
+        });
+
+        $("#intro9 > button").click(function(){
+            let txt = $(this).text();
+            $(".timing.bg9 > div").removeClass("ani1 ani2 ani3 ani4 ani5 ani6 ani7").addClass(txt);
+        });
     </script>
 </body>
 
