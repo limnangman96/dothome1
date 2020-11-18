@@ -163,7 +163,8 @@
         slider[currentIndex].style.opacity = "0";
         slider[nextIndex].style.opacity = "1";   //.slider-img .slider에 transition
 
-        currentIndex = nextIndex;
+        currentIndex = nextIndex++;
+        // currentIndex = nextIndex;
     },3000);
 </script>
 </body>
