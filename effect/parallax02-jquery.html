@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax01-javascript</title>
+    <title>parallax02-jQuery</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* reset */
         @font-face {
-            font-family: 'Wolyeonggyo';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Wolyeonggyo.woff') format('woff');
+            font-family: 'ghanachoco';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
@@ -35,22 +35,22 @@
         .info.left {left: 20px; top: 10px;}
         .info.right {right: 20px; top: 20px;}
         .info.bottom {right: 20px; bottom: 20px;}
-        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info h1 {font-size: 1.8rem; line-height: 1.4;}
         .info p {font-size: 1rem;}
         .info li {font-size: 1rem; line-height: 1.4;}
         .info li a {
             width: 25px; height: 25px; 
             display: inline-block; 
-            border: 1px dashed #222; 
-            border-radius: 50%; color: #222; 
+            border: 1px dashed #fff; 
+            border-radius: 50%; color: #fff; 
             text-align: center; 
             line-height: 25px; 
             font-size: 0.8rem; 
             margin: 5px;
         } 
         .info li a.active {
-            background: #222;
-            color: #fff;
+            background: #fff;
+            color: #000;
         }
         @media (max-width: 800px){
             .info h1 {display: none;}
@@ -58,20 +58,20 @@
 
         /* main */
         body {
-            --color-h1 : #dc6e25;
+            --color-h1 : #647aff;
             --color-title: #fff;
             --color-sub: #999;
             --color-link: #000;
-            --color-bg: #cecece;
-            --font-cafe: 'Wolyeonggyo';
+            --color-bg: #111;
+            --font-cafe: 'ghanachoco';
             --font-lato: 'Lato', sans-serif;
 
             background-color: var(--color-bg);
             color: var(--color-title);
             font-family: var(--font-cafe);
+            --aspect-ratio : 33/17;
             
         }
-
         #parallax-wrap {
             overflow: hidden;
         }
@@ -94,6 +94,7 @@
         .contents {
             margin: 0 auto 35vh;
             width: 100%;
+            overflow: hidden;
         }
         .content-item {
             width: 1200px;
@@ -105,7 +106,7 @@
             margin-left: auto;
         }
         .content-item-num {
-            font-size: 25vw;
+            font-size: 24vw;
             font-weight: 100;
             font-family: var(--font-lato);
             position: absolute; right: -5vw; top: -20vw;
@@ -123,21 +124,30 @@
             padding: 1% 0;
         }
         .content-item-imgWrap {
-            width: 100%;
-            padding-bottom: 50%;
-            /* position을 쓸건데 그걸 쓰면 영역이 사라지기 때문에 임의의 공간 만들었다. 반응형을 만들려면 pixel은 사용할 수 없다. */
+            /* padding-bottom: 50%; */
+            /* 패딩을 준 이유? position을 쓸건데 그걸 쓰면 영역이 사라지기 때문에 임의의 공간 만들었다. 반응형을 만들려면 pixel은 사용할 수 없다. */
+            padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
+            --width: 100%;
+            width: var(--width);
+            overflow: hidden;
             position: relative;
+            background: red;
+            /* 임시로 지정한 배경색. 이미지 크기 수정이 잘 되었는지 확인용 */
         }
         .content-item-img {
-            width: 100%;
-            position: absolute; left: 0; top: 0;
-            background: url(img/images01.jpg);
+            width: var(--width);
+            --overflow: 60px;
+            position: absolute;
+            top: calc(-1 * var(--overflow));
+            /* 60px과 같은 값 */
+            background: url(img/images18.jpg);
             /* background-size: contain; (width값 중심으로 맞추어 주는 것) */
             background-size: cover;
-            height: 100%;
+            height: calc(100% + (3 * var(--overflow)));
+            background-position: 50% 0;
         }
         .content-item-desc {
-            font-size: 5vw;
+            font-size: 4.7vw;
             line-height: 1.4;
             text-align: right;
             word-break: keep-all;
@@ -163,73 +173,52 @@
         }
 
         .content-item:nth-child(2) .content-item-img {
-            background: url(img/images05.jpg);
+            background: url(img/images10.jpg);
             background-size: cover;
         }
         .content-item:nth-child(3) .content-item-img {
-            background: url(img/images03.jpg);
+            background: url(img/images11.jpg);
             background-size: cover;
         }
         .content-item:nth-child(4) .content-item-img {
-            background: url(img/images09.jpg);
+            background: url(img/images12.jpg);
             background-size: cover;
         }
         .content-item:nth-child(5) .content-item-img {
-            background: url(img/images02.jpg);
+            background: url(img/images13.jpg);
             background-size: cover;
         }
         .content-item:nth-child(6) .content-item-img {
-            background: url(img/images06.jpg);
+            background: url(img/images14.jpg);
             background-size: cover;
         }
         .content-item:nth-child(7) .content-item-img {
-            background: url(img/images07.jpg);
+            background: url(img/images15.jpg);
             background-size: cover;
         }
         .content-item:nth-child(8) .content-item-img {
-            background: url(img/images08.jpg);
+            background: url(img/images16.jpg);
             background-size: cover;
         }
         .content-item:nth-child(9) .content-item-img {
-            background: url(img/images04.jpg);
+            background: url(img/images17.jpg);
             background-size: cover;
         }
         
-        /* 한번에 나타나기 */
-        /* .contents > section {
-            opacity: 0;
-            transition: all 1s;
-            transform: translateY(200px);
-        }
-        .contents > section.show {
-            opacity: 1;
-            transform: translateY(0);
-        } */
-
-        /* 개별적으로 나타나기 */
-        /* .contents > section .content-item-num {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0, 0.65, 0.43, 1.2);}
-        .contents > section .content-item-title {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s  cubic-bezier(0, 0.65, 0.43, 1.2);}
-        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px); transition: all 1s 0.6s cubic-bezier(0, 0.65, 0.43, 1.2);}
-        .contents > section .content-item-desc {opacity: 0; transform: translateX(200px); transition: all 1s 0.9s cubic-bezier(0, 0.65, 0.43, 1.2);}
-        .contents > section.show .content-item-num {opacity: 0.4; transform: translateY(0);}
-        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0);}
-        .contents > section.show .content-item-imgWrap {opacity: 1; transform: translateY(0);}
-        .contents > section.show .content-item-desc {opacity: 1; transform: translateX(0);} */
-
-
+        
     </style>
 </head>
 <body>
 
 <!-- info -->
 <div class="info left">
-    <h1>Parallax Effect01 - javascript</h1>
-    <p>패랠랙스 스크로링 효과 - 기본</p>
+    <h1>Parallax Effect02 - jQuery</h1>
+    <p>패랠랙스 스크로링 효과 - 이질감 느끼기</p>
 </div>
 <div class="info right">
     <ul>
-        <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html" class="active">1</a></li>
-        <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
+        <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
+        <li><a href="parallax02-jquery.html"  class="active">2</a><a href="parallax02-javascript.html">2</a></li>
         <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
         <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
         <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
@@ -242,20 +231,10 @@
 
 <div class="info bottom">
     <ul>
-        <li>scrollTop() : <span class="pageYOffset">0</span>px</li>
-        <li>#section1 : <span class="s1OffsetTop">0</span>px</li>
-        <li>#section2 : <span class="s2OffsetTop">0</span>px</li>
-        <li>#section3 : <span class="s3OffsetTop">0</span>px</li>
-        <li>#section4 : <span class="s4OffsetTop">0</span>px</li>
-        <li>#section5 : <span class="s5OffsetTop">0</span>px</li>
-        <li>#section6 : <span class="s6OffsetTop">0</span>px</li>
-        <li>#section7 : <span class="s7OffsetTop">0</span>px</li>
-        <li>#section8 : <span class="s8OffsetTop">0</span>px</li>
-        <li>#section9 : <span class="s9OffsetTop">0</span>px</li>
+        <li>scrollTop() : <span class="scrollTop">0</span>px</li>
     </ul>
 </div>
 <!-- //info -->
-
     <main>
         <section id="parallax-wrap">
             <h1>Parallax <em>Scrolling</em></h1>
@@ -338,78 +317,49 @@
     
 
     <!-- script -->
+    <script src="../jquery/jquery.min_1.1.24.js"></script>
     <script>
-        window.addEventListener("scroll", function(){
-            let pageYOffset = window.pageYOffset;
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
 
-        //출력용
-        // document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
-        // document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-        // document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-        // document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-        // document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-        // document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-        // document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-        // document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-        // document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-        // document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+        // 각 섹션의 시작점을 0으로 맞추기 위하여 스크롤탑값 - 오프셋탑값 = 0
+        //    let offset1 = (scrollTop - $("#section1").offset().top);
+        //    let offset2 = (scrollTop - $("#section2").offset().top);
+        //    let offset3 = (scrollTop - $("#section3").offset().top);
+        //    let offset4 = (scrollTop - $("#section4").offset().top);
+        //    let offset5 = (scrollTop - $("#section5").offset().top);
+        //    let offset6 = (scrollTop - $("#section6").offset().top);
+        //    let offset7 = (scrollTop - $("#section7").offset().top);
+        //    let offset8 = (scrollTop - $("#section8").offset().top);
+        //    let offset9 = (scrollTop - $("#section9").offset().top);
 
-        //출력용 글씨 색
-        // if(pageYOffset > document.getElementById("section1").offsetTop){
-        //     document.querySelector(".s1OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s1OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section2").offsetTop){
-        //     document.querySelector(".s2OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s2OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section3").offsetTop){
-        //     document.querySelector(".s3OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s3OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section4").offsetTop){
-        //     document.querySelector(".s4OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s4OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section5").offsetTop){
-        //     document.querySelector(".s5OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s5OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section6").offsetTop){
-        //     document.querySelector(".s6OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s6OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section7").offsetTop){
-        //     document.querySelector(".s7OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s7OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section8").offsetTop){
-        //     document.querySelector(".s8OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s8OffsetTop").style.color = "white"
-        // }
-        // if(pageYOffset > document.getElementById("section9").offsetTop){
-        //     document.querySelector(".s9OffsetTop").style.color = "red"
-        // } else {
-        //     document.querySelector(".s9OffsetTop").style.color = "white"
-        // }
+        //    $("#section1 .content-item-desc").css({transform: "translateX("+offset1+"px)"})
+        //    $("#section2 .content-item-desc").css({transform: "translateX("+offset2+"px)"})
+        //    $("#section3 .content-item-desc").css({transform: "translateX("+offset3+"px)"})
+        //    $("#section4 .content-item-desc").css({transform: "translateX("+offset4+"px)"})
+        //    $("#section5 .content-item-desc").css({transform: "translateX("+offset5+"px)"})
+        //    $("#section6 .content-item-desc").css({transform: "translateX("+offset6+"px)"})
+        //    $("#section7 .content-item-desc").css({transform: "translateX("+offset7+"px)"})
+        //    $("#section8 .content-item-desc").css({transform: "translateX("+offset8+"px)"})
+        //    $("#section9 .content-item-desc").css({transform: "translateX("+offset9+"px)"})
 
-        document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
-            for (let i=1; i<=9; i++){
-                document.querySelector(".s"+i+"OffsetTop").innerText = document.getElementById("section"+i).offsetTop;
-                if(pageYOffset > document.getElementById("section"+i).offsetTop){
-                    document.querySelector(".s"+i+"OffsetTop").style.color = "red"
-                } else {
-                    document.querySelector(".s"+i+"OffsetTop").style.color = "white"
-                }
-            }
+            // 한번에(for문)
+            // for(let i=1; i<=9; i++){
+            //     let offset = (scrollTop - $("#section"+i).offset().top);
+            //     $("#section"+i+" .content-item-desc").css({transform: "translateX("+offset+"px)"})
+            // }
+
+            // 한번에(each문)
+            $(".content-item").each(function(){
+                let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+                let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+                $(this).find(".content-item-desc").css({transform: "translateY("+ -offset2 +"px)"})
+                $(this).find(".content-item-num").css({transform: "translateY("+ offset1 +"px)"})
+                $(this).find(".content-item-img").css({transform: "translateY("+ offset2 +"px)"})
+            })
+
+            //출력용
+            $(".scrollTop").text(scrollTop);
         });
     </script>
 </body>
