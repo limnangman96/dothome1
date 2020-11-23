@@ -21,7 +21,7 @@
         #cont4 {height: 933px; }
         #cont5 {height: 287px; background: #f0f0f0;}
         #cont6 {height: 304px; background: linear-gradient(#00978b, #088558);}
-        #footer {height: 150px; background: #191919;}
+        #footer {background: #191919;}
 
         .container {margin: 0 auto; width: 1200px; height: inherit;}
 
@@ -105,28 +105,44 @@
         .cont6 .more {display: inline-block; font-size: 16px; font-weight: 800; margin-top: 40px; border: 1px solid #ccc; border-radius: 60px;}
         .cont6 .more a {display: inline-block; padding: 15px 32px; color: #fff;}
 
-        .footer {color: #a8a8a8; position: relative;}
-        .footer .logo_left {float: left; width: 150px; height: 30px; background: url(img/clova.png) 0 -30px; position: absolute; top: 20px; left: 0;} 
-        .footer .logo_right {float: left; padding: 0 8px; position: absolute; top: 0px; right: 0; position: absolute; top: 20px; right: 0;}
-        .footer .logo_right .logo_right_1 {float: left; width: 30px; height: 30px; background: url(img/clova.png) -200px -110px;}
-        .footer .logo_right .logo_right_2 {float: left; width: 30px; height: 30px; background: url(img/clova.png) -200px -138px;}
-        .footer .logo_right .logo_right_3 {float: left; width: 30px; height: 30px; background: url(img/clova.png) -200px -186px;}
-        .footer .logo_right .logo_right_4 {float: left; width: 30px; height: 30px; background: url(img/clova.png) -215px -210px;}
-        .footer .ul1 {float: left; position: relative; top: 20px; left: 0; position: absolute; top: 100px; left:0;}
-        .footer .ul2 {float: left; position: relative; top: 20px; left: 0; position: absolute; top: 100px; left: 520px;}
-        .footer .ul3 {float: left; position: relative; top: 20px; left: 0; position: absolute; top: 100px; left: 800px;}
-        .footer li {float: left; font-size: 14px; padding-right: 10px;}
-        .footer .ul3 li:last-child:after {margin-right: 0;}
-        .footer li:after {
-            display: inline-block;
-            width: 1px;
-            height: 10px;
-            margin: 0 8px;
-            background: #2c2c2c;
-            vertical-align: -1px;
+        .footer {color: #a8a8a8; position: relative; overflow: hidden;}
+        .footer .logo_left {float: left; width: 150px; height: 30px; background: url(img/clova.png) 0 -30px; position: absolute; top: 30px; left: 0;} 
+        .footer .logo_right {float: right; position: absolute; right: 0; top: 30px; }
+        .footer .logo_right > div {width: 30px; height: 30px; background: url(img/clova.png) no-repeat; float: left; margin-left: 5px;}
+        .footer .logo_right > .logo_right_1 {background-position: -120px -85px;}
+        .footer .logo_right > .logo_right_2 {background-position: -158px -212px;}
+        .footer .logo_right > .logo_right_3 {background-position: -132px -212px;}
+        .footer .logo_right > .logo_right_4 {background-position: -195px -140px;;}
+        .footer ul {display: inline-block; margin-top: 80px; margin-bottom: 40px; width: 33%; font-size: 13px; box-sizing: border-box;}
+        .footer .ul1 {text-align: left;}
+        .footer .ul1 li:after {
             content: '';
+            width: 1px; height: 10px;
+            background: #a8a8a8;
+            position: absolute; left: 128px; top: 2px;
         }
-        .footer .ul2 li:after{margin: 0; width: 0; height: 0;}
+        .footer .ul1 li:last-child:after {
+            content: '';
+            width: 0px; height: 0px;
+            background: #a8a8a8;
+            position: absolute; left: 128px; top: 2px;
+        }
+        .footer .ul2 {text-align: center;}
+        .footer .ul3 {text-align: right;}
+        .footer .ul3 li:last-child {padding-right: 0;}
+        .footer .ul3 li:after {
+            content: '';
+            width: 1px; height: 10px;
+            background: #a8a8a8;
+            position: absolute; left: -9px; top: 2px;
+        }
+        .footer .ul3 li:first-child:after {
+            content: '';
+            width: 0px; height: 0px;
+            background: #a8a8a8;
+            position: absolute; left: 128px; top: 2px;
+        }
+        .footer ul li {display: inline-block; padding-right: 15px; position: relative;}
     </style>
 </head>
 <body>
@@ -292,8 +308,7 @@
                         <div class="logo_right_4"></div>
                     </div>
                     <ul class="ul1">
-                        <li>고객센터</li>
-                        <li>1833-5387</li>
+                        <li>고객센터 1833-5387</li>
                         <li>09:00 - 18:00 (주말, 공휴일 휴무)</li>
                     </ul>
                     <ul class="ul2">
