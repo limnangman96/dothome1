@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <title>CLOVA 2차</title>
     <style>
          /* reset */
          *, img {margin: 0; padding: 0;}
@@ -12,10 +13,8 @@
         body {font-family: 'NanumSquare', sans-serif;}
 
         /* layout */
-        #wrap {}
         #header {width: 100%; height: 86px; background: #fff; position: fixed; z-index: 100;}
         #banner {height: 650px; width: 100%; background:url(https://static-clova.pstatic.net/static/70fd2ea/img/platform/bg_cst.png) no-repeat; background-size: cover;}
-        #contents {}
         #cont1 {height: 1000px;}
         #cont2 {height: 800px;}
         #cont3 {height: 1000px;}
@@ -24,7 +23,7 @@
         .container {margin: 0 auto; width: 1200px; height: inherit; background: rgba(255,255,255,0);}
 
         .header {position: relative;}
-        .header .header_logo {float: left; width: 150px; height: 30px; background: url(img/clova.png)0 -60px; margin-top: 25px;}
+        .header .header_logo {float: left; width: 150px; height: 30px; background: url(img/clova.png)0 -60px; margin-top: 30px;}
         .header .header_menu {float: left;}
         .header .header_menu ul {position: absolute; left: 300px; top: 33px;}
         .header .header_menu li {display: inline-block; margin: 0 35px;}
@@ -97,10 +96,10 @@
         .cont3 h3 {margin-top: 50px; font-size: 20px;}
         .cont3 a {display: inline-block; margin-top: 30px; padding: 13px 40px; background: #05D585; color: #fff; border-radius: 5px;}
 
-        .footer {color: #a8a8a8; position: relative; overflow: hidden;}
+        .footer {color: #565656; font-weight: 600; position: relative; overflow: hidden;}
         .footer .logo_left {float: left; width: 150px; height: 30px; background: url(img/clova.png) 0 -30px; position: absolute; top: 30px; left: 0;} 
         .footer .logo_right {float: right; position: absolute; right: 0; top: 30px; }
-        .footer .logo_right > div {width: 30px; height: 30px; background: url(img/clova.png) no-repeat; float: left; margin-left: 5px;}
+        .footer .logo_right > div {width: 30px; height: 30px; background: url(img/clova.png) no-repeat; float: left; margin-left: 10px;}
         .footer .logo_right > .logo_right_1 {background-position: -120px -85px;}
         .footer .logo_right > .logo_right_2 {background-position: -158px -212px;}
         .footer .logo_right > .logo_right_3 {background-position: -132px -212px;}
@@ -110,7 +109,7 @@
         .footer .ul1 li:after {
             content: '';
             width: 1px; height: 10px;
-            background: #a8a8a8;
+            background: #565656;
             position: absolute; left: 128px; top: 2px;
         }
         .footer .ul1 li:last-child:after {
@@ -123,13 +122,13 @@
         .footer .ul3 li:after {
             content: '';
             width: 1px; height: 10px;
-            background: #a8a8a8;
+            background: #565656;
             position: absolute; left: -9px; top: 2px;
         }
         .footer .ul3 li:first-child:after {
             content: '';
             width: 0px; height: 0px;
-            background: #a8a8a8;
+            background: #565656;
             position: absolute; left: 128px; top: 2px;
         }
         .footer ul li {display: inline-block; padding-right: 15px; position: relative;}
@@ -202,14 +201,14 @@
                             <div class="box_left">
                                 <div class="img"></div>
                                 <h3>대화 등록</h3>
-                                <p>10개~15개의 대화 등록
+                                <p>10개~15개의 대화 등록<br>
                                     적은 데이터로도 챗봇 생성 가능
                                 </p>
                             </div>
                             <div class="box_center">
                                 <div class="img"></div>
                                 <h3>학습</h3>
-                                <p>방대한 네이버 DB와 함께
+                                <p>방대한 네이버 DB와 함께<br>
                                     빠르게 학습하고 바로 확인 가능
                                 </p>
                             </div>
