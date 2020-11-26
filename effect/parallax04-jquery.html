@@ -204,15 +204,15 @@
         }
 
         /* 한번에 나타나기 */
-        /* .content-item-desc {
+        /* .content-item-desc span {
             opacity: 0;
             transition: all 0.77s cubic-bezier(0.82, 0.29, 0.2, 1.16);
             transform: translateY(150px);
-        }
-        .content-item-desc.show {
+        } */
+        .content-item-desc span.show {
             transform: translateY(0);
             opacity: 1;
-        } */
+        }
 
         /* 한 글자씩 나타나기 */
         .content-item-desc span {
@@ -361,20 +361,76 @@
             // });
 
             // 한 글자씩 나오게 하기
-            // if( $(window).scrollTop() > $("#section1").offset().top ){
-            //     $("#section1 .content-item-desc span").each(function(i){
-            //         setTimeout(()=>{
-            //             $("#section1 .content-item-desc span").eq(i).addClass("show")
-            //         }, 50 * (i+1));
-            //     });
-            // }
+            if( $(window).scrollTop() > $("#section1").offset().top ){
+                $("#section1 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section1 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section2").offset().top ){
+                $("#section2 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section2 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section3").offset().top ){
+                $("#section3 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section3 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section4").offset().top ){
+                $("#section4 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section4 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section5").offset().top ){
+                $("#section5 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section5 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section6").offset().top ){
+                $("#section6 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section6 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section7").offset().top ){
+                $("#section7 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section7 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section8").offset().top ){
+                $("#section8 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section8 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section9").offset().top ){
+                $("#section9 .content-item-desc span").each(function(i){
+                    setTimeout(()=>{
+                        $("#section9 .content-item-desc span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
+            }
 
-            // 모든 콘텐츠에게 한 글자씩 나오게 하기 적용
-            $(".content-item").each(function(){
-                if( $(window).scrollTop() > $(this).offset().top ){
-                    gsap.to( $(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
-                }
-            });
+            // 모든 콘텐츠에게 한 글자씩 나오게 하기 적용 -> 과부화때문에 좋은 방법은 아니다. 나중에 class함수 사용해서 다시 만날것임.
+            // $(".content-item").each(function(){
+            //     if( $(window).scrollTop() > $(this).offset().top ){
+            //         gsap.to( $(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
+            //     }
+            // });
         });
 
     </script>
