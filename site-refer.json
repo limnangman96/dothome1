@@ -8,14 +8,14 @@
         {
           "id": 1,
           "link": "https://limnangman96.github.io/dothome1/webstandard/index.html",
-          "image": "../images/port-site04.jpg",
+          "image": "../images/port-site02.jpg",
           "title": "Webstandard",
           "category": "PORTFOLIO1"
         },
         {
           "id": 2,
           "link": "https://limnangman96.github.io/dothome1/responsive/index.html",
-          "image": "../images/port-site02.jpg",
+          "image": "../images/port-site05.jpg",
           "title": "Responsive",
           "category": "PORTFOLIO2"
         },
@@ -36,7 +36,7 @@
         {
             "id": 5,
             "link": "https://limnangman96.github.io/dothome1/",
-            "image": "../images/port-site05.jpg",
+            "image": "../images/port-site04.jpg",
             "title": "Dothome",
             "category": "PORTFOLIO5"
           }
