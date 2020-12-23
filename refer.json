@@ -4,7 +4,7 @@
     "data": {
       "refer": [
         {
-          "type": "html",
+          "type": "HTML",
           "id": "A",
           "title": "<a>",
           "desc": "<a> 태그는 하이퍼 링크를 정의합니다.",
