@@ -8,7 +8,7 @@
         {
           "id": 1,
           "link": "https://limnangman96.github.io/dothome1/webstandard/index.html",
-          "image": "../img/port-site04.jpg",
+          "image": process.env.PUBLIC_URL + "/port-site04.jpg",
           "title": "Webstandard",
           "category": "PORTFOLIO1"
         },
